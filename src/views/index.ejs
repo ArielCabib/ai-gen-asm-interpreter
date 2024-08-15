@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Assembly Interpreter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Assembly Interpreter</h1>
+    <form method="POST">
+        <label for="code">Enter your assembly code:</label><br>
+        <textarea name="code" id="code"><%= code ? code : '' %></textarea><br>
+        <button type="submit">Run</button>
+    </form>
+
+    <% if (registers) { %>
+    <div class="result">
+        <h2>Registers:</h2>
+        <ul>
+            <% for (const reg in registers) { %>
+            <li><%= reg %>: <%= registers[reg] %></li>
+            <% } %>
+        </ul>
+    </div>
+    <% } %>
+</body>
+</html>
