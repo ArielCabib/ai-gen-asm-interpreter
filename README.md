@@ -24,3 +24,6 @@ MOV C 20
 END:
 HLT
 ```
+## Disclaimer
+
+This project is totally experimental and should not be used in production. It is provided as a proof of concept and is not intended to be used for any serious purposes. It's also 90% AI generated, so it may not work as expected.
